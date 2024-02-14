@@ -1,113 +1,147 @@
+import SwiperCards from "@/components/SwiperCards";
+import { mainCards } from "@/constants/boxes";
 import Image from "next/image";
+
+import { MdAutorenew } from "react-icons/md";
+import { RiLeafFill } from "react-icons/ri";
+import { SlEnergy } from "react-icons/sl";
+
+type CardsProps = {
+  title: string;
+  description: string;
+  image: string;
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <div className="w-full flex flex-col items-center">
+      <section
+        className="border-[#675345] border-t-2 w-full h-[850px] bg-center bg-cover bg-no-repeat sepia-[0.5]"
+        style={{ backgroundImage: `url(/assets/bg-4.jpg)` }}
+      />
+
+      <section className="max-w-[1650px] w-full sm:p-[5%] p-6 flex flex-col items-center my-12 sm:my-0">
+        <h1 className="text-2xl w-full font-bold text-center">
+          Nossos Produtos em Alta
+        </h1>
+        <p className="pb-6 border-b border-neutral-400 text-center">
+          Confira abaixo alguns produtos mais vendidos no momento
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <div className="mt-20 flex gap-12 items-center w-full">
+          <SwiperCards content={mainCards} />
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <h1 className="mt-[1.5em] mb-20 w-full text-center font-[500] text-5xl cursor-default p-6">
+        Eai,
+        <span className="ml-2 mr-2 font-[500] text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#4d3417] to-[#df9469]">
+          Que tal fazer
+        </span>
+        experimentar <br />
+        <span className="ml-2 mr-2 font-[500] text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#4d3417] to-[#df9469]">
+          nossos
+        </span>
+        produtos? 
+      </h1>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section className="max-w-[1650px] w-full sm:p-[5%] p-6 flex flex-col items-center">
+        <h1 className="text-2xl w-full font-bold text-center">
+          Nossos Princípios
+        </h1>
+        <p className="pb-6 border-b border-neutral-400 text-center">
+          Nossa empresa preza muito pelos valores!
+        </p>
+        <div className="flex gap-12 justify-center items-center flex-wrap mt-20">
+          <div className="max-w-[400px] w-full flex flex-col items-center bg-white p-10 shadow-md shadow-neutral-200 rounded-xl">
+            <div className="bg-[#ffc18238] p-2 rounded-full w-[40px] h-[40px] flex items-center justify-center">
+              <MdAutorenew size={25} className="colored-icon" />
+            </div>
+            <div className="w-full mt-8">
+              <h1 className="text-base font-semibold text-center">Qualidade</h1>
+              <p className="mt-4 text-sm text-[#717171] text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+                repudiandae animi sapiente quasi reprehenderit, a aut quas!
+                Voluptate animi tempora deleniti, facilis adipisci, repellendus
+                perspiciatis corrupti, quia neque repellat unde.
+              </p>
+            </div>
+          </div>
+          <div className="max-w-[400px] w-full flex flex-col items-center bg-white p-10 shadow-md shadow-neutral-200 rounded-xl">
+            <div className="bg-[#ffc18238] p-2 rounded-full w-[40px] h-[40px] flex items-center justify-center">
+              <RiLeafFill size={25} className="colored-icon" />
+            </div>
+            <div className="w-full mt-8">
+              <h1 className="text-base font-semibold text-center">
+                Sustentabilidade
+              </h1>
+              <p className="mt-4 text-sm text-[#717171] text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+                repudiandae animi sapiente quasi reprehenderit, a aut quas!
+                Voluptate animi tempora deleniti, facilis adipisci, repellendus
+                perspiciatis corrupti, quia neque repellat unde.
+              </p>
+            </div>
+          </div>
+          <div className="max-w-[400px] w-full flex flex-col items-center bg-white p-10 shadow-md shadow-neutral-200 rounded-xl">
+            <div className="bg-[#ffc18238] p-2 rounded-full w-[40px] h-[40px] flex items-center justify-center">
+              <SlEnergy size={25} className="colored-icon" />
+            </div>
+            <div className="w-full mt-8">
+              <h1 className="text-base font-semibold text-center">Inovação</h1>
+              <p className="mt-4 text-sm text-[#717171] text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+                repudiandae animi sapiente quasi reprehenderit, a aut quas!
+                Voluptate animi tempora deleniti, facilis adipisci, repellendus
+                perspiciatis corrupti, quia neque repellat unde.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="w-full h-[600px] bg-center flex justify-center items-center bg-cover bg-no-repeat grayscale-[0.5] p-6"
+        style={{ backgroundImage: `url(/assets/bg-2.jpg)` }}
+      >
+        <div className="w-[500px] bg-[#5e5e5e7a] rounded-lg p-6 backdrop-blur-xl">
+          <h1 className="text-2xl font-bold text-center text-white">
+            Sustentabilidade
+          </h1>
+          <h2 className="text-center mt-1 text-white">
+            Florestas renováveis, 100% ecológica
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className="mt-6 text-sm text-justify text-white font-light">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto enim
+            tempore repellendus tempora hic commodi eligendi repellat ad facere
+            impedit. Eveniet at optio delectus iste nostrum laudantium odio
+            distinctio dicta?
           </p>
-        </a>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section className="max-w-[1650px] mt-12 mb-20 w-full sm:p-[5%] p-6 flex flex-col items-center">
+        <div className="w-full flex justify-center md:justify-between gap-10 items-center md:flex-nowrap flex-wrap">
+          <div className="w-full flex flex-col">
+            <span className="text-[#ca865e] w-full text-sm font-semibold">Novidades</span>
+            <div className="border-t border-[#ca865e] w-[20px] my-2" />
+            <h1 className="text-4xl font-bold w-full mt-2">Faça parte da Empresa</h1>
+            <h2 className="w-full mt-2 text-lg">Best solution for your business</h2>
+            <p className="w-full mt-6 text-[#717171] text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quasi dignissimos eaque non, at, natus deleniti itaque repellat mollitia praesentium aliquid asperiores ut dolorum ipsum porro tempore sequi excepturi amet?</p>
+            <div className="bg-[#ca865e] text-white rounded-full mt-10 w-[250px] px-4 py-2 cursor-pointer text-center">
+              Quero fazer parte
+            </div>
+          </div>
+          <div className="w-full flex justify-center">
+            <Image
+              src={"/assets/person.svg"}
+              alt="Section Image"
+              width={350}
+              height={350}
+              className="selection:bg-transparent"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

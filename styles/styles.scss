@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #3e3e3e;
+  box-sizing: border-box;
+}
+
+.white-icon * {
+  color: white;
+  cursor: pointer;
+}
+
+.gray-icon * {
+  color: #3e3e3e;
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.gray-icon:hover * {
+  transform: scale(1.05);
+}
+
+.colored-icon * {
+  color: #ca8036;
+}
+
+.brown-icon * {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  color: #4d3417;
+}
+
+.brown-icon:hover * {
+  transform: scale(1.05);
+}
